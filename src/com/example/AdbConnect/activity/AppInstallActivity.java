@@ -1,4 +1,4 @@
-package com.example.AdbConnect;
+package com.example.AdbConnect.activity;
 
 import android.app.ActionBar;
 import android.app.Activity;
@@ -14,6 +14,8 @@ import android.widget.Toast;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.TextView;
+import com.example.AdbConnect.R;
+import com.example.AdbConnect.utils.ShellComand;
 
 public class AppInstallActivity extends Activity implements
 		View.OnClickListener {
@@ -92,7 +94,7 @@ public class AppInstallActivity extends Activity implements
 			@Override
 			public void run() {
 				final String installResult = ShellComand.exec("adb install -r "
-						+ apkPath);
+                        + apkPath);
 				mHandler.post(new Runnable() {
 					@Override
 					public void run() {

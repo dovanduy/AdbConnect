@@ -1,4 +1,4 @@
-package com.example.AdbConnect;
+package com.example.AdbConnect.application;
 
 public class AppInfo {
 

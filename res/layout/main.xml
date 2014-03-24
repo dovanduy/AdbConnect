@@ -1,53 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:orientation="vertical" >
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical">
 
-    <RelativeLayout
-        android:id="@+id/scan_layout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp" >
-
-        <Button
+    <Button
             android:id="@+id/scan_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="60dp"
-            android:text="查找设备" />
+            android:layout_marginTop="10dp"
+            android:text="查找设备"/>
 
-        <ProgressBar
-            android:id="@+id/scan_prog"
-            android:layout_width="wrap_content"
+
+    <Button
+            android:id="@+id/app_manager"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:visibility="gone" />
-    </RelativeLayout>
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:text="应用管理"/>
 
     <Button
-        android:id="@+id/app_install"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="10dp"
-        android:text="安装应用" />
-
-    <Button
-        android:id="@+id/app_manager"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@id/app_install"
-        android:layout_marginBottom="5dp"
-        android:text="应用管理" />
+            android:id="@+id/app_install"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/app_manager"
+            android:layout_marginBottom="5dp"
+            android:text="安装应用"/>
 
     <ListView
-        android:id="@+id/device_listview"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@id/app_manager"
-        android:layout_below="@id/scan_layout" />
+            android:id="@+id/device_listview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/app_install"
+            android:layout_below="@id/scan_btn"/>
 
 </RelativeLayout>
